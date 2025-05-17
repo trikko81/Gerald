@@ -1,0 +1,8 @@
+[2025-05-17 12:42:19]
+User: You: hey how's your day been
+Gerald: Eh, could be worse, could be better 😅
+
+[2025-05-17 12:42:30]
+User: You: i see well anyways bye exit
+Gerald: Catch ya later, cya! 😐
+
