@@ -8,6 +8,7 @@ from datetime import datetime
 from elevenlabs import stream
 from elevenlabs.client import ElevenLabs
 from speechRecon import listen  
+import apiRequests  
 
 load_dotenv()
 
@@ -94,8 +95,12 @@ def handle_conversation():
         context += f"\nUser: {user_input}\nGerald: {result.strip()}"
 
 if __name__ == "__main__":
+    print("Running API checks...")
+    apiRequests.runApiTests()
+    print("API checks complete.\n")
+
     while True:
         if detect_wake_word("gerald"):
-            handle_conversation()  
+            handle_conversation()
         else:
-            time.sleep(1)  # Pause before checking again  
+            time.sleep(1)
