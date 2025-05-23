@@ -1,17 +1,18 @@
-import speech_recognition as sr
-import time
 import os
-from dotenv import load_dotenv
-from langchain_ollama import OllamaLLM
-from langchain.prompts import ChatPromptTemplate
+import time
 from datetime import datetime
+
+import apiRequests
+from dotenv import load_dotenv
 from elevenlabs import stream
 from elevenlabs.client import ElevenLabs
-from speechRecon import listen  
-import apiRequests  
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain_ollama import OllamaLLM
+from langchain.prompts import ChatPromptTemplate
 from langchain.callbacks.base import BaseCallbackHandler
-import speech_recognition as sr 
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from speechRecon import listen
+import speech_recognition as sr
+
 
 recognizer = sr.Recognizer()
 
