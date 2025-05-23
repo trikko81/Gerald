@@ -102,6 +102,8 @@ def handle_conversation():
     context = ""
     while True:
         user_input = listen().strip()
+        if not user_input:
+            continue
         if user_input.lower() == "exit":
             print("Goodbye!")
             break

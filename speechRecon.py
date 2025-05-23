@@ -3,8 +3,6 @@ import speech_recognition as sr  # type: ignore
 recognizer = sr.Recognizer()
 
 def listen():
-
-
     while True:
         try:
             with sr.Microphone() as mic:
@@ -15,11 +13,18 @@ def listen():
                 text = text.lower()
                 return text
 
+        except sr.WaitTimeoutError:
+            print("No speech detected in time window.")
+            return ""  # Or continue if you want it to try again immediately
+
         except sr.UnknownValueError:
             print("Could not understand.")
+            return ""  # Optional: continue instead to retry
+
         except sr.RequestError as e:
             print(f"RequestError: {e}")
             return "error"
+
         except KeyboardInterrupt:
-            print("\nListening stopped by el usuario!!.")
+            print("\nListening stopped by el usuario!!")
             return "stopped"
