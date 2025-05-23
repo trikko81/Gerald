@@ -15,11 +15,11 @@ def listen():
 
         except sr.WaitTimeoutError:
             print("No speech detected in time window.")
-            return ""  # Or continue if you want it to try again immediately
+            return ""  
 
         except sr.UnknownValueError:
             print("Could not understand.")
-            return ""  # Optional: continue instead to retry
+            return ""  
 
         except sr.RequestError as e:
             print(f"RequestError: {e}")
