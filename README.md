@@ -75,3 +75,6 @@ Gerald is a laid-back AI assistant who listens when you say its name and answers
 ## License
 
 This project is open source under the MIT License.
+
+
+#### Special thank you to Anabel Elliot for suggesting this
